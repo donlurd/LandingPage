@@ -1,0 +1,22 @@
+<section id="blogs" class="blogs-section" aria-labelledby="blogs-title">
+  <div class="section-heading">
+    <p class="eyebrow">Blogs</p>
+    <h2 id="blogs-title">Notas sobre lo que aprendo y construyo.</h2>
+  </div>
+
+  <div class="posts-list">
+    @for (post of posts; track post.title) {
+      <article class="post-card">
+        <div class="post-meta">
+          <span>{{ post.category }}</span>
+          <time [attr.datetime]="post.publishedAt">
+            {{ post.publishedLabel }}
+          </time>
+        </div>
+
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.summary }}</p>
+      </article>
+    }
+  </div>
+</section>

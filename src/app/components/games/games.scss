@@ -1,0 +1,75 @@
+:host {
+  display: block;
+}
+
+.games-section {
+  width: min(100% - 2rem, 1120px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.section-heading {
+  max-width: 44rem;
+}
+
+.eyebrow,
+.category {
+  margin: 0 0 1rem;
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.section-heading > p:last-child {
+  margin: 1.25rem 0 0;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.game-card {
+  min-height: 15rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 1rem;
+  background: #1e293b;
+}
+
+.game-card h3 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 1.3rem;
+}
+
+.game-card > p:last-child {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .games-section {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+}

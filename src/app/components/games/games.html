@@ -1,0 +1,19 @@
+<section id="games" class="games-section" aria-labelledby="games-title">
+    <div class="section-heading">
+        <p class="eyebrow">Juegos</p>
+        <h2 id="games-title">Ideas, experencias y mundos por explorar.</h2>
+        <p>
+            Un lugar para compartir proyectos, intereses y referencia al mundo de los videojuegos.
+        </p>
+    </div>
+
+    <div class="games-grid">
+        @for (game of games; track game.title) {
+            <article class="game-card">
+                <p class="category">{{ game.category }}</p>
+                <h3>{{ game.title }}</h3>
+                <p>{{ game.description }}</p>
+            </article>
+        }
+    </div>
+</section>

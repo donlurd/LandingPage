@@ -1,0 +1,69 @@
+<header class="site-header">
+    <nav 
+        class="site-nav" 
+        [class.is-menu-open]="isMenuOpen()"
+        aria-label="Navegación Principal"
+        [class.is-compact]="isCompact()">
+        <a class="brand" href="#top" aria-label="Ir al Inicio">
+            <img
+                class="profile-image"
+                src="images/donlurd.png"
+                alt="Foto de perfil de Ariel Villegas"
+                width="48"
+                height="48"
+            />
+            <span class="brand-name">DonLurd Ariel Villegas</span>
+        </a>
+
+        <div id="primary-navigation" class="nav-links">
+            <a
+                href="#developer"
+                [class.is-active]="activeSection() === 'developer'"
+                [attr.aria-current]="activeSection() === 'developer' ? 'location' : null"
+                (click)="closeMenu()"
+            >
+                Desarrollador
+            </a>
+
+            <a
+                href="#games"
+                [class.is-active]="activeSection() === 'games'"
+                [attr.aria-current]="activeSection() === 'games' ? 'location' : null"
+                (click)="closeMenu()"
+            >
+                Juegos
+            </a>
+
+            <a
+                href="#blogs"
+                [class.is-active]="activeSection() === 'blogs'"
+                [attr.aria-current]="activeSection() === 'blogs' ? 'location' : null"
+                (click)="closeMenu()"
+            >
+                Blogs
+            </a>
+
+            <a
+                href="#contact"
+                [class.is-active]="activeSection() === 'contact'"
+                [attr.aria-current]="activeSection() === 'contact' ? 'location' : null"
+                (click)="closeMenu()"
+            >
+                Contacto
+            </a>
+        </div>
+
+
+        
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-controls="primary-navegation"
+            [attr.aria-expanded]="isMenuOpen()"
+            [attr.aria-label]="isMenuOpen() ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'"
+            (click)="toggleMenu()"
+        >
+        Menú    
+        </button>
+    </nav>
+</header>

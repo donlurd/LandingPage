@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(100% - 2rem, 1120px);
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .site-footer {
+    flex-direction: column;
+  }
+}
